@@ -8,12 +8,13 @@ services:
 
 env:
   global:
-    - APP_NAME=thawing-journey-6674
+    - APP_NAME=pythonmongoheroku-va-gh-beta
     - MONGOLAB_URI=mongodb://localhost/test
-    - secure: MRuHkLbL9HPkJPU5lzkKM1+NOq1S5RrhxEyhJkk60xxYiF7DMzydiBN8oFBjWrSmyGeGRuEC22a0I5ItobdWVszfcJCaXHwtfKzfGOUdKuyCnDgvojXhv/jrBvULyLK6zsLw3b8NMxdnwNsHqSPm19qW/EIGEl9Zv/637Igos69z9aT7+xrEG013+6HtKYb8RHm+iPSNsFoBi/RSAHYuM1eLTZWG2WAkjgzZaYmrHCgNwVmk+HOGR+TOWN7Iu5lrjyvC1XDCQrOvo1hZI30cd9OqJ5aadFm3exQpNhI4I7AgOnCbK3NoWNc/GAnqKXCvsaIQ80Jd/uLIOVyMjD6Xmg==
-
+    - secure: Ap+axIBwAxFxn0uL/PZj77zB9trAF4VY638KaKvDRK0ZVgtemBYyjtfUAGXtpY6u+mTYOb8CF2Y/P87lV3J7UNTur7lm4HwNzCzWMvvQIUK84U93hTwCxMppce6FlV6I7k3YzGoevMkQLUT13St07w7UiKg3uGALo3WQOMWiQqy5+5c07MiyhnpqQwmWNxFYBSVT4FsSJOaJkoyLSmEG6UjFVBgsf3UA5fbT0o7EK3paDDMLD/cgj1Xdluv9R5Jnsw7i4rrYcCMG/6JuenNc5zCQW+NE8lZ2hH5/5c8XzC6sL3+utoSmxO9X/UzEfFoIk1V/krqY7MdodfgxLl1cWw==
+    
 before_install:
   - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  - . $HOME/.rvm/scripts/rvm && rvm use ruby-2.0.0-p598 --default && ruby –version
 
 install:
   - pip install -r requirements.txt
